@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ead722a690.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      form {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #262626;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      form .container {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form .container input {
+        width: 90%;
+        height: 50%;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid #1b1b1b;
+        padding: 10px;
+      }
+      form .container {
+        padding: 10px;
+      }
+      #show {
+        font-size: 20px;
+        position: absolute;
+        margin-left: 380px;
+      }
+    </style>
+    <title>Show / Hide Password</title>
+  </head>
+  <body>
+    <form action="">
+      <div class="container">
+        <input type="text" name="" id="ip" />
+        <i class="fa-solid fa-eye" id="show"></i>
+      </div>
+    </form>
+    <script>
+      let show = document.getElementById("show");
+      show.addEventListener("click", function () {
+        let ip = document.getElementById("ip");
+        show.classList.add("fa-eye-slash");
+        show.classList.remove("fa-eye");
+        ip.type == "password" ? (ip.type = "text") : (ip.type = "password");
+      });
+    </script>
+  </body>
+</html>
