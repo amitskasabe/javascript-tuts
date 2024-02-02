@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --red: #ff0000;
+  --black: #282828;
+  --white: #ffffff;
+  --gray: #ededed;
+  --text-gray: #808080;
+  --font: "Roboto";
+}
+
+body {
+  background-color: var(--black);
+  font-family: var(--font);
+}
